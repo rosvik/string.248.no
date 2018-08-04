@@ -1,0 +1,51 @@
+body {
+	background-color: rgb(15, 20, 25);
+	color: rgb(144, 201, 196);
+	max-width: 700px;
+	margin: 100px auto 40px auto;
+	font-family: Menlo, Courier, monospace;
+	font-size: 14px;
+}
+
+input {
+	width: 100%;
+	height: 50px;
+	background-color: rgb(31, 41, 49);
+	color: rgb(144, 201, 196);
+	border-color: rgb(242, 151, 24);
+	margin-bottom: 30px;
+	/* padding: 0 20px 0 20px; */
+	text-indent: 20px;
+	font-size: 15px;
+}
+
+table {
+	width: 100%;
+}
+
+input:focus { 
+	outline: none; 
+}
+
+::placeholder {
+	opacity: .5;
+}
+
+th {
+	text-align: left;
+	opacity: 0.7;
+	min-width: 70px;
+}
+
+td {
+	word-break: break-all;
+}
+
+a {
+	color: rgb(242, 151, 24);
+}
+
+footer {
+	margin: 100px 0 100px 0;
+	text-align: center;
+}
