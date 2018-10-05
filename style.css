@@ -1,7 +1,8 @@
 body {
 	background-color: rgb(15, 20, 25);
-	color: rgb(144, 201, 196);
-	max-width: 700px;
+	color: rgb(144, 201, 196);	
+	width: 90%;
+	max-width: 1200px;
 	margin: 100px auto 40px auto;
 	font-family: Menlo, Courier, monospace;
 	font-size: 14px;
@@ -20,7 +21,7 @@ input {
 }
 
 table {
-	width: 100%;
+	/* width: 100%; *
 }
 
 input:focus { 
@@ -48,4 +49,8 @@ a {
 footer {
 	margin: 100px 0 100px 0;
 	text-align: center;
+}
+
+.char {
+	font-family: sans-serif;
 }

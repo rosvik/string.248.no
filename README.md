@@ -2,6 +2,8 @@
 
 # Simple hash generator website
 
+Run `git submodule update --init` after clone to get dependencies.
+
 ## Credits
 
 JavaScript Hash Functions
