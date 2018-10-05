@@ -2,6 +2,8 @@
 
 # Simple hash generator website
 
+Try a demo at [string.248.no](https://string.248.no)
+
 ## Credits
 
 JavaScript Hash Functions
