@@ -1,4 +1,4 @@
-![qore logo](https://qore.no/res/logo-text-100.png)
+<img src="https://qore.no/res/logo-text.svg" width="100" alt="qore">
 
 # Simple hash generator website
 
