@@ -8,14 +8,17 @@ body {
 	font-size: 14px;
 }
 
+.input-container {
+	display: flex;
+}
+
 input {
-	width: 100%;
+	flex-grow: 1;
 	height: 50px;
 	background-color: rgb(31, 41, 49);
 	color: rgb(144, 201, 196);
 	border-color: rgb(242, 151, 24);
 	margin-bottom: 30px;
-	/* padding: 0 20px 0 20px; */
 	text-indent: 20px;
 	font-size: 15px;
 }
