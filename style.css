@@ -23,10 +23,6 @@ input {
 	font-size: 15px;
 }
 
-table {
-	/* width: 100%; *
-}
-
 input:focus { 
 	outline: none; 
 }

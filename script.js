@@ -54,22 +54,3 @@ function chars_info(input) {
 function parse_char(character) {
 	character
 }
-
-function loadFile(url) {
-	var xhr= new XMLHttpRequest();
-	xhr.open('GET', url, true);
-	xhr.onreadystatechange= function() {
-		if (this.readyState !== 4) return;
-		if (this.status !== 200) { // Error handling
-			return;
-		}
-		// document.getElementById(htmlId).innerHTML = this.responseText;
-		// window.history.pushState('page', 'Title', '#' + file);
-
-		console.log(this.responseText);
-
-		// Update EventListener for new urls
-		listenUrls();
-	}
-	xhr.send();
-}
