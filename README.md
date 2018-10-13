@@ -10,7 +10,7 @@ This is the project files for [string.248.no](https://string.248.no), a string a
 The website is avaliable at [string.248.no](https://string.248.no), but if you want to run the website on you own, download the project files and run this command to get all dependencies.
 
 ```
-git submodule update --init
+git submodule update --init --recursive
 ```
 
 Open index.html in your favorite browser, and type some text in the input field.
