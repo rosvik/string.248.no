@@ -1,13 +1,21 @@
-<img src="https://qore.no/res/logo-text.svg" width="100" alt="qore">
+<img src="docs/248-logo.svg" width="150" alt="248">
 
-# Simple hash generator website
 
-Try a demo at [string.248.no](https://string.248.no)
+# [string.248.no](https://string.248.no)
 
-## Credits
+This is the project files for string.248.no, a string analyzer on the web.
 
-JavaScript Hash Functions
-https://github.com/jbt/js-crypto
+## Installation
 
-jsSHA
-https://github.com/Caligatio/jsSHA
+The website is avaliable at [string.248.no](https://string.248.no), but if you want to run the website on you own, download the project files and run this command to get all dependencies.
+
+```
+git submodule update --init
+```
+
+Open index.html in your favorite browser, and type some text in the input field.
+
+## Submodules
+
+* [js-crypto](https://github.com/jbt/js-crypto) - JavaScript Hash Functions
+* [jsSHA](https://github.com/Caligatio/jsSHA) - A pure JS SHA implementation
