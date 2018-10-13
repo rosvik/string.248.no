@@ -1,9 +1,9 @@
 <img src="docs/248-logo.svg" width="150" alt="248">
 
 
-# [string.248.no](https://string.248.no)
+# string.248.no
 
-This is the project files for string.248.no, a string analyzer on the web.
+This is the project files for [string.248.no](https://string.248.no), a string analyzer on the web.
 
 ## Installation
 
