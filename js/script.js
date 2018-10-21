@@ -32,9 +32,17 @@ function js_sha(input, hash, id) {
 
 function chars_info(input) {
 	let out = "";
-	
+
 	// https://mathiasbynens.be/notes/javascript-unicode
 	let stringarr = Array.from(input);
+
+	if (stringarr.length > 0) {
+		out += "<tr>" 
+			+ "<th>Letter</th>"
+			+ "<th>Unicode</th>"
+			+ "<th>Dec / Hex</th>"
+			+ "</tr>";
+	}
 
 	for (var i = 0; i < stringarr.length; i++) {
 		let letter = stringarr[i];
@@ -43,14 +51,10 @@ function chars_info(input) {
 		let unicode = "U+" + hex_code.padStart(4, '0');
 
 		out += "<tr>" 
-			+ "<td>Letter: <span class='char'>" + letter + "</span></td>"
-			+ "<td>Code: " + code + " / 0x" + hex_code + "</td>"
-			+ "<td>" + unicode + "</td>"
+			+ "<td><span class='char'>" + letter + "</span></td>"
+			+ "<td><a href='https://www.compart.com/en/unicode/" + unicode + "'>" + unicode + "</a></td>"
+			+ "<td>" + code + " / 0x" + hex_code + "</td>"
 			+ "</tr>";
 	}
 	return out;
-}
-
-function parse_char(character) {
-	character
 }

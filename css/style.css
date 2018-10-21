@@ -4,7 +4,7 @@ body {
 	width: 90%;
 	max-width: 1200px;
 	margin: 100px auto 40px auto;
-	font-family: Menlo, Courier, monospace;
+	font-family: Menlo, Courier, monospace, sans-serif, serif;
 	font-size: 14px;
 }
 
@@ -48,8 +48,4 @@ a {
 footer {
 	margin: 100px 0 100px 0;
 	text-align: center;
-}
-
-.char {
-	font-family: sans-serif;
 }
