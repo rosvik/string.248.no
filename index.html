@@ -2,11 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Hashing</title>
-	<link rel="stylesheet" href="style.css">
-
+	<title>248 - String analyzer</title>
+	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 </head>
 <body>
 
@@ -15,111 +13,39 @@
 </div>
 
 <table id="out">
-
 	
-	<tr>
-		<td colspan="2">
-			<h4>Unkeyed cryptographic hash functions</h4>
-		</td>
-	</tr>
+	<tr><td colspan="2"><h4>Unkeyed cryptographic hash functions</h4></td></tr>
 	
-	<tr>
-		<th>MD5</th>
-		<td id="md5_out"></td>
-	</tr>
-	<tr>
-		<th>SHA-1</th>
-		<td id="sha1_out"></td>
-	</tr>
-	<tr>
-		<th>SHA-224</th>
-		<td id="sha224_out"></td>
-	</tr>
-	<tr>
-		<th>SHA3-224</th>
-		<td id="sha3224_out"></td>
-	</tr>
-	<tr>
-		<th>SHA-256</th>
-		<td id="sha256_out"></td>
-	</tr>
-	<tr>
-		<th>SHA3-256</th>
-		<td id="sha3256_out"></td>
-	</tr>
-	<tr>
-		<th>SHA-384</th>
-		<td id="sha384_out"></td>
-	</tr>
-	<tr>
-		<th>SHA3-384</th>
-		<td id="sha3384_out"></td>
-	</tr>
-	<tr>
-		<th>SHA-512</th>
-		<td id="sha512_out"></td>
-	</tr>
-	<tr>
-		<th>SHA3-512</th>
-		<td id="sha3512_out"></td>
-	</tr>
-<!-- 	<tr>
-		<th>SHAKE128</th>
-		<td id="shake128_out"></td>
-	</tr>
-	<tr>
-		<th>SHAKE256</th>
-		<td id="shake256_out"></td>
-	</tr> -->
+	<tr><th>MD5</th><td id="md5_out"></td></tr>
+	<tr><th>SHA-1</th><td id="sha1_out"></td></tr>
+	<tr><th>SHA-224</th><td id="sha224_out"></td></tr>
+	<tr><th>SHA-256</th><td id="sha256_out"></td></tr>
+	<tr><th>SHA-384</th><td id="sha384_out"></td></tr>
+	<tr><th>SHA-512</th><td id="sha512_out"></td></tr>
+	<tr><th>SHA3-224</th><td id="sha3224_out"></td></tr>
+	<tr><th>SHA3-256</th><td id="sha3256_out"></td></tr>
+	<tr><th>SHA3-384</th><td id="sha3384_out"></td></tr>
+	<tr><th>SHA3-512</th><td id="sha3512_out"></td></tr>
 
 </table>
 
-<script type="text/javascript" src="js-crypto/md5-min.js"></script>
-<script type="text/javascript" src="js-crypto/sha1-min.js"></script>
-<script type="text/javascript" src="js-crypto/sha256-min.js"></script>
+<table id="chars" style="margin-top: 30px">
+		
+</table>
 
-<script type="text/javascript" src="jsSHA/src/sha.js"></script>
 
-<script>
-
-	let input = document.getElementById("hash_entry");
-	full_compute(input);
-	input.onkeyup = function() { full_compute(input);}
-
-	function full_compute(element) {
-		compute(element, md5, 'md5_out');
-		compute(element, sha1, 'sha1_out');
-		js_sha(element, "SHA-224", 'sha224_out');
-		js_sha(element, "SHA3-224", 'sha3224_out');
-		compute(element, sha256, 'sha256_out');
-		js_sha(element, "SHA3-256", 'sha3256_out');
-		js_sha(element, "SHA-384", 'sha384_out');
-		js_sha(element, "SHA3-384", 'sha3384_out');
-		js_sha(element, "SHA-512", 'sha512_out');
-		js_sha(element, "SHA3-512", 'sha3512_out');
-		// js_sha(element, "SHAKE128", 'shake128_out');
-		// js_sha(element, "SHAKE256", 'shake256_out');
-	}
-
-	function compute(element, hash, id) {
-		let entry_value = element.value;
-		let hash_value = hash(entry_value);
-		document.getElementById(id).innerHTML = hash_value;
-	}
-
-	function js_sha(element, hash, id) {
-		var shaObj = new jsSHA(hash, "TEXT");
-		shaObj.update(element.value);
-		var hash = shaObj.getHash("HEX");
-		document.getElementById(id).innerHTML = hash;
-	}
-
-</script>
+<script src="js-crypto/md5-min.js"></script>
+<script src="js-crypto/sha1-min.js"></script>
+<script src="js-crypto/sha256-min.js"></script>
+<script src="jsSHA/src/sha.js"></script>
+<script src="js/script.js"></script>
 
 <footer>
-	
-	<p>Credits: <a href="https://github.com/jbt/js-crypto">github.com/jbt/js-crypto</a>, <a href="https://github.com/Caligatio/jsSHA">github.com/Caligatio/jsSHA</a></p>
-
+	<p>
+		Credits: 
+		<a href="https://github.com/jbt/js-crypto">github.com/jbt/js-crypto</a>, 
+		<a href="https://github.com/Caligatio/jsSHA">github.com/Caligatio/jsSHA</a>
+	</p>
 </footer>
 
 </body>
