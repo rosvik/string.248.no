@@ -1,6 +1,16 @@
 let input = document.getElementById('hash_entry');
+load_params();
 full_compute(input.value);
-input.onkeyup = function() { full_compute(input.value); }
+
+input.onkeyup = function() { 
+	full_compute(input.value); 
+}
+
+function load_params() {
+	let url = new URL(window.location.href)
+	let param = url.searchParams.get('s')
+	input.value = param;
+}
 
 function full_compute(input) {
 	compute(input, md5, 'md5_out');
