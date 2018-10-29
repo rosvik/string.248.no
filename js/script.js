@@ -6,12 +6,14 @@ input.onkeyup = function() {
 	full_compute(input.value); 
 }
 
+// Use URL parameters if set
 function load_params() {
 	let url = new URL(window.location.href)
 	let param = url.searchParams.get('s')
 	input.value = param;
 }
 
+// Compute and display all hashes
 function full_compute(input) {
 	compute(input, md5, 'md5_out');
 	compute(input, sha1, 'sha1_out');
@@ -27,12 +29,14 @@ function full_compute(input) {
 	document.getElementById('chars').innerHTML = chars_info(input);
 }
 
+// Hashes from js-crypto
 function compute(input, hash, id) {
 	let entry_value = input;
 	let hash_value = hash(entry_value);
 	document.getElementById(id).innerHTML = hash_value;
 }
 
+// Hashes from jsSHA
 function js_sha(input, hash, id) {
 	var shaObj = new jsSHA(hash, 'TEXT');
 	shaObj.update(input);
@@ -40,6 +44,7 @@ function js_sha(input, hash, id) {
 	document.getElementById(id).innerHTML = hash;
 }
 
+// Compute and display character information
 function chars_info(input) {
 	let out = "";
 
