@@ -61,7 +61,7 @@ function chars_info(input) {
 		let unicode = "U+" + hex_code.padStart(4, '0');
 
 		out += "<tr>" 
-			+ "<td><span class='char'>" + letter + "</span></td>"
+			+ "<td><span class='char'><b>" + letter + "</b></span></td>"
 			+ "<td><a href='https://www.compart.com/en/unicode/" + unicode + "'>" + unicode + "</a></td>"
 			+ "<td>" + code + " / 0x" + hex_code + "</td>"
 			+ "</tr>";
