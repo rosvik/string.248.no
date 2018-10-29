@@ -5,6 +5,8 @@
 
 This is the project files for [string.248.no](https://string.248.no), a string analyzer on the web.
 
+![screenshot](docs/screenshot.png)
+
 ## Installation
 
 The website is avaliable at [string.248.no](https://string.248.no), but if you want to run the website on you own, download the project files and run this command to get all dependencies.
