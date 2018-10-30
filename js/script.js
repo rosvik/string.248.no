@@ -33,7 +33,7 @@ function full_compute(input) {
 function compute(input, hash, id) {
 	let entry_value = input;
 	let hash_value = hash(entry_value);
-	document.getElementById(id).innerHTML = hash_value;
+	document.getElementById(id).textContent = hash_value;
 }
 
 // Hashes from jsSHA
@@ -41,7 +41,7 @@ function js_sha(input, hash, id) {
 	var shaObj = new jsSHA(hash, 'TEXT');
 	shaObj.update(input);
 	var hash = shaObj.getHash('HEX');
-	document.getElementById(id).innerHTML = hash;
+	document.getElementById(id).textContent = hash;
 }
 
 // Compute and display character information
