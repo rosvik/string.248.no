@@ -3,7 +3,7 @@
 
 # string.248.no
 
-This is the project files for [string.248.no](https://string.248.no), a string analyzer on the web.
+This is the project files for [string.248.no](https://string.248.no), a static string analyzer on the web.
 
 ![screenshot](docs/screenshot.png)
 
