@@ -1,4 +1,3 @@
-s
 <img src="docs/248-logo.svg" width="150" alt="248">
 
 
