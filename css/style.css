@@ -39,6 +39,7 @@ th {
 
 td {
 	word-break: break-all;
+	min-width: 8ch;
 }
 
 a {
