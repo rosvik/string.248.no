@@ -71,6 +71,10 @@ function js_sha(input, hash, id) {
 function chars_info(input) {
 	let out = "";
 
+	if (input.length > 512) { 
+		return "<p>(The string is longer than 512 characters. Skipping table generation.)</p>";
+	}
+
 	// https://mathiasbynens.be/notes/javascript-unicode
 	let stringarr = Array.from(input);
 
