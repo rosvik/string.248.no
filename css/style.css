@@ -55,5 +55,8 @@ footer {
 	text-align: center;
 	font-size: smaller;
 	font-weight: bold;
+}
+
+.faded {
 	opacity: .7;
 }
