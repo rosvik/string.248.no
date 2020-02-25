@@ -1,9 +1,11 @@
 let input = document.getElementById('hash_entry');
+let character_table = document.getElementById('chars');
 let LENGTH = 0;
 
 load_params();
 full_compute(input.value);
 
+// Perform calculations on any keyup event
 input.onkeyup = function () {
 	full_compute(input.value);
 }
@@ -21,6 +23,10 @@ function full_compute(input) {
 	// Update LENGTH variable
 	LENGTH = length(input);
 
+	// Set string stats
+	stats(input);
+
+	// Calculate hashes
 	compute(input, md5, 'md5_out');
 	compute(input, sha1, 'sha1_out');
 	js_sha(input, 'SHA-224', 'sha224_out');
@@ -32,27 +38,30 @@ function full_compute(input) {
 	js_sha(input, 'SHA-512', 'sha512_out');
 	js_sha(input, 'SHA3-512', 'sha3512_out');
 
-	b64(input, false, 'b64e_out');
-	b64(input, true, 'b64d_out');
+	// Calculate base64
+	b64(input, false, 'b64e_out'); // Encoding
+	b64(input, true, 'b64d_out');  // Decoding
 
-	stats(input);
-
-	document.getElementById('chars').innerHTML = chars_info(input);
+	// Add character table to DOM
+	character_table.innerHTML = chars_info(input);
 }
 
+// Push any value to DOM
 function setOutVal(id, value) {
 	document.getElementById(id).textContent = value;
 }
 
+// Set string stats
 function stats(input) {
 	// Display the length from length()
 	setOutVal('length', LENGTH);
 
-	let size = (new TextEncoder().encode(input)).length
+	// Calculate byte size of input
+	let size = (new TextEncoder().encode(input)).length;
 	setOutVal("size", size);
 }
 
-// Do base-64 encoding/decoding
+// Base-64 encoding/decoding
 function b64(input, decode, id) {
 	if (!decode) { // Encode
 		try {
@@ -84,7 +93,7 @@ function js_sha(input, hash, id) {
 	setOutVal(id, hash);
 }
 
-// Compute and display character information
+// Compute character information table
 function chars_info(input) {
 	let out = "";
 
@@ -92,9 +101,9 @@ function chars_info(input) {
 		return "<p>(The string is longer than 512 characters. Skipping table generation.)</p>";
 	}
 
-	// https://mathiasbynens.be/notes/javascript-unicode
 	let stringarr = Array.from(input);
 
+	// Initalize character table if it is not empty
 	if (stringarr.length > 0) {
 		out += "<tr>"
 			+ "<th>Letter</th>"
@@ -103,6 +112,7 @@ function chars_info(input) {
 			+ "</tr>";
 	}
 
+	// Populate character table
 	for (var i = 0; i < stringarr.length; i++) {
 		let letter = stringarr[i];
 		let code = letter.codePointAt();
