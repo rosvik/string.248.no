@@ -25,14 +25,26 @@ function full_compute(input) {
 	js_sha(input, 'SHA3-384', 'sha3384_out');
 	js_sha(input, 'SHA-512', 'sha512_out');
 	js_sha(input, 'SHA3-512', 'sha3512_out');
+
 	b64(input, false, 'b64e_out');
 	b64(input, true, 'b64d_out');
+
+	stats(input);
 
 	document.getElementById('chars').innerHTML = chars_info(input);
 }
 
 function setOutVal(id, value) {
 	document.getElementById(id).textContent = value;
+}
+
+function stats(input) {
+	// Count characters Source
+	// https://mathiasbynens.be/notes/javascript-unicode#accounting-for-astral-symbols
+	let length = Array.from(input).length;
+
+	setOutVal('length', length);
+	// setOutVal("size", "1000");
 }
 
 // Do base-64 encoding/decoding
