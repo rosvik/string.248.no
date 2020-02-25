@@ -44,7 +44,9 @@ function stats(input) {
 	let length = Array.from(input).length;
 
 	setOutVal('length', length);
-	// setOutVal("size", "1000");
+
+	let size = (new TextEncoder().encode(input)).length
+	setOutVal("size", size);
 }
 
 // Do base-64 encoding/decoding
