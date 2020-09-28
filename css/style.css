@@ -12,17 +12,17 @@ body {
 	display: flex;
 }
 
-input {
+textarea {
 	flex-grow: 1;
-	height: 50px;
 	background-color: rgb(31, 41, 49);
 	color: rgb(144, 201, 196);
 	border-color: rgb(242, 151, 24);
-	text-indent: 20px;
-	font-size: 15px;
+	height: 1.1em;
+	font-size: 1.1em;
+	padding: 1em;
 }
 
-input:focus { 
+textarea:focus { 
 	outline: none; 
 }
 
