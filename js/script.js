@@ -104,11 +104,11 @@ function compute(input, hash, id) {
 }
 
 // Hashes from jsSHA
-function js_sha(input, hash, id) {
-	let shaObj = new jsSHA(hash, 'TEXT');
+function js_sha(input, hashname, id) {
+	let shaObj = new jsSHA(hashname, 'TEXT');
 	shaObj.update(input);
-	let hash = shaObj.getHash('HEX');
-	setOutVal(id, hash);
+	let hash_value = shaObj.getHash('HEX');
+	setOutVal(id, hash_value);
 }
 
 // Compute character information table
