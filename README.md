@@ -17,7 +17,7 @@ If you want to run the website on you own, download the project files and run th
 git submodule update --init --recursive
 ```
 
-Open index.html in your favorite browser, and type some text in the input field.
+The project is pure static vanilla JS, so open index.html in your favorite browser, and enjoy 🚀
 
 ## Submodules
 
