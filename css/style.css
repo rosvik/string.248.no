@@ -1,6 +1,6 @@
 body {
 	background-color: rgb(15, 20, 25);
-	color: rgb(144, 201, 196);	
+	color: rgb(144, 201, 196);
 	width: 90%;
 	max-width: 1200px;
 	margin: 100px auto 40px auto;
@@ -22,12 +22,16 @@ textarea {
 	padding: 1em;
 }
 
-textarea:focus { 
-	outline: none; 
+textarea:focus {
+	outline: none;
 }
 
 ::placeholder {
 	opacity: .5;
+}
+
+table {
+ margin-top: 2rem;
 }
 
 th {
