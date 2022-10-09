@@ -17,7 +17,7 @@ textarea {
 	background-color: rgb(31, 41, 49);
 	color: rgb(144, 201, 196);
 	border-color: rgb(242, 151, 24);
-	height: 1.1em;
+	height: 1.2em;
 	font-size: 1.1em;
 	padding: 1em;
 }
@@ -43,6 +43,10 @@ th {
 td {
 	word-break: break-all;
 	min-width: 8ch;
+}
+
+tr td:first-child {
+	font-weight: bold;
 }
 
 a {
