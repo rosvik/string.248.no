@@ -1,59 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8"/>
-  <title>248 - String analyzer</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>248 - String analyzer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-  <div class="input-container">
-    <textarea id="hash_entry" autofocus placeholder="Enter string..."></textarea>
-  </div>
+  <body>
+    <div class="input-container">
+      <textarea
+        id="hash_entry"
+        autofocus
+        placeholder="Enter string..."
+      ></textarea>
+    </div>
 
-  <p class="faded"><span id="wordcount">0</span> words, <span id="length">0</span> characters, <span id="size">0</span> bytes</p>
-
-  <table id="out">
-    <tr><th colspan="2">Hashes</th></tr>
-    <tr><td><b>MD5</b></td><td id="md5_out"></td></tr>
-    <tr><td><b>SHA-1</b></td><td id="sha1_out"></td></tr>
-    <tr><td><b>SHA-224</b></td><td id="sha224_out"></td></tr>
-    <tr><td><b>SHA-256</b></td><td id="sha256_out"></td></tr>
-    <tr><td><b>SHA-384</b></td><td id="sha384_out"></td></tr>
-    <tr><td><b>SHA-512</b></td><td id="sha512_out"></td></tr>
-    <tr><td><b>SHA3-224</b></td><td id="sha3224_out"></td></tr>
-    <tr><td><b>SHA3-256</b></td><td id="sha3256_out"></td></tr>
-    <tr><td><b>SHA3-384</b></td><td id="sha3384_out"></td></tr>
-    <tr><td><b>SHA3-512</b></td><td id="sha3512_out"></td></tr>
-    <br>
-    <tr><th colspan="2">Base64</th></tr>
-    <tr><td><b>Encoding</b></td><td id="b64e_out"></td></tr>
-    <tr><td><b>Decoding</b></td><td id="b64d_out"></td></tr>
-  </table>
-
-  <table id="chars" style="margin-top: 30px">
-      
-  </table>
-
-  <footer class="faded">
-    <p>
-      Source code: 
-      <a href="https://github.com/rosvik/string.248.no">rosvik/string.248.no</a>
+    <p class="faded">
+      <span id="wordcount">0</span> words,
+      <span id="length">0</span> characters, <span id="size">0</span> bytes
     </p>
-    <p>
-      Credit: 
-      <a href="https://github.com/jbt/js-crypto">jbt/js-crypto</a>, 
-      <a href="https://github.com/Caligatio/jsSHA">Caligatio/jsSHA</a>,
-      <a href="https://github.com/iarna/word-count">iarna/word-count</a>
-    </p>
-  </footer>
 
-  <script src="js-crypto/md5-min.js"></script>
-  <script src="js-crypto/sha1-min.js"></script>
-  <script src="js-crypto/sha256-min.js"></script>
-  <script src="jsSHA/src/sha.js"></script>
-  <script src="js/script.js"></script>
+    <table id="out">
+      <tr>
+        <th colspan="2">Hashes</th>
+      </tr>
+      <tr>
+        <td><b>MD5</b></td>
+        <td id="md5_out"></td>
+      </tr>
+      <tr>
+        <td><b>SHA-1</b></td>
+        <td id="sha1_out"></td>
+      </tr>
+      <tr>
+        <td><b>SHA-224</b></td>
+        <td id="sha224_out"></td>
+      </tr>
+      <tr>
+        <td><b>SHA-256</b></td>
+        <td id="sha256_out"></td>
+      </tr>
+      <tr>
+        <td><b>SHA-384</b></td>
+        <td id="sha384_out"></td>
+      </tr>
+      <tr>
+        <td><b>SHA-512</b></td>
+        <td id="sha512_out"></td>
+      </tr>
+      <tr>
+        <td><b>SHA3-224</b></td>
+        <td id="sha3224_out"></td>
+      </tr>
+      <tr>
+        <td><b>SHA3-256</b></td>
+        <td id="sha3256_out"></td>
+      </tr>
+      <tr>
+        <td><b>SHA3-384</b></td>
+        <td id="sha3384_out"></td>
+      </tr>
+      <tr>
+        <td><b>SHA3-512</b></td>
+        <td id="sha3512_out"></td>
+      </tr>
+      <br />
+      <tr>
+        <th colspan="2">Base64</th>
+      </tr>
+      <tr>
+        <td><b>Encoding</b></td>
+        <td id="b64e_out"></td>
+      </tr>
+      <tr>
+        <td><b>Decoding</b></td>
+        <td id="b64d_out"></td>
+      </tr>
+    </table>
 
-</body>
+    <table id="chars" style="margin-top: 30px"></table>
+
+    <footer class="faded">
+      <p>
+        Source code:
+        <a href="https://github.com/rosvik/string.248.no">
+          rosvik/string.248.no
+        </a>
+      </p>
+      <p>
+        Credit:
+        <a href="https://github.com/jbt/js-crypto">jbt/js-crypto</a>,
+        <a href="https://github.com/Caligatio/jsSHA">Caligatio/jsSHA</a>,
+        <a href="https://github.com/iarna/word-count">iarna/word-count</a>
+      </p>
+    </footer>
+
+    <script src="js-crypto/md5-min.js"></script>
+    <script src="js-crypto/sha1-min.js"></script>
+    <script src="js-crypto/sha256-min.js"></script>
+    <script src="jsSHA/src/sha.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
