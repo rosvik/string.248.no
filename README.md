@@ -5,7 +5,7 @@
 
 This is the project files for [string.248.no](https://string.248.no), a static string analyzer on the web.
 
-![screenshot](docs/screenshot.png)
+[![screenshot](docs/screenshot.png)](https://string.248.no)
 
 ## Installation
 
