@@ -5,7 +5,7 @@
 
 This is the project files for [string.248.no](https://string.248.no), a static string analyzer on the web.
 
-[![screenshot](docs/screenshot.png)](https://string.248.no)
+[![screenshot](https://user-images.githubusercontent.com/1774972/221312241-d516d389-4e5a-4155-812e-9449dbca88ea.png)](https://string.248.no)
 
 ## Examples
 
@@ -16,7 +16,7 @@ This is the project files for [string.248.no](https://string.248.no), a static s
 
 ## Installation
 
-The website is avaliable at [string.248.no](https://string.248.no), and the current master branch is present on [rosvik.github.io/string.248.no](https://rosvik.github.io/string.248.no/). 
+The website is avaliable at [string.248.no](https://string.248.no), and the current master branch is present on [rosvik.github.io/string.248.no](https://rosvik.github.io/string.248.no/).
 
 If you want to run the website on you own, download the project files and run this command to get all dependencies.
 
