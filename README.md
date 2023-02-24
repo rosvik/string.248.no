@@ -28,5 +28,5 @@ The project is pure static vanilla JS, so open index.html in your favorite brows
 
 ## Submodules
 
-* [js-crypto](https://github.com/jbt/js-crypto) - JavaScript Hash Functions
+* [tiny-hashes](https://github.com/jbt/tiny-hashes) - Tiny JavaScript Hash Functions
 * [jsSHA](https://github.com/Caligatio/jsSHA) - A pure JS SHA implementation
