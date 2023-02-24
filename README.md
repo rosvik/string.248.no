@@ -7,6 +7,13 @@ This is the project files for [string.248.no](https://string.248.no), a static s
 
 [![screenshot](docs/screenshot.png)](https://string.248.no)
 
+## Examples
+
+- [Emoji](https://string.248.no/?s=%F0%9F%92%A9%20%F0%9F%91%8D%20%F0%9F%91%8D%F0%9F%8F%BE%20%F0%9F%87%B3%F0%9F%87%B4%20%F0%9F%87%B8%F0%9F%87%AF%20%F0%9F%91%A8%E2%80%8D%F0%9F%91%A9%E2%80%8D%F0%9F%91%A7%E2%80%8D%F0%9F%91%A6%20%F0%9F%95%B4)
+- [Base64 encoded string](https://string.248.no/?s=c3RyaW5nLjI0OC5ubw==)
+- [Obscure Unicode characters](https://string.248.no/?s=%EF%B7%BD%20%E1%84%80%E1%84%80%E1%84%80%EA%B0%81%E1%86%A8%E1%86%A8%20m%CC%B4%CC%82%CC%87%CD%9D%CD%89%CC%98%CC%ACZ%CD%91%CD%AB%CD%83%CD%AA%CC%82%CD%AB%CC%BD%CD%8F%CC%B4%CC%99%CC%A4%CC%9E%CD%89%CD%9A%CC%AF%CC%9E%CC%A0%CD%8D)
+- [Shrugface](https://string.248.no/?s=%C2%AF\_(%E3%83%84)_/%C2%AF)
+
 ## Installation
 
 The website is avaliable at [string.248.no](https://string.248.no), and the current master branch is present on [rosvik.github.io/string.248.no](https://rosvik.github.io/string.248.no/). 
