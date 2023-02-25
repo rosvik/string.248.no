@@ -16,23 +16,23 @@ This is the project files for [string.248.no](https://string.248.no), a static s
 
 ## Installation
 
-The website is avaliable at [string.248.no](https://string.248.no).
-
-If you want to run the website on you own, download the project files and run this command to get all dependencies.
+The website is avaliable at [string.248.no](https://string.248.no), but if you want to run the website on you own, clone the repo with submodules by running
 
 ```
-git submodule update --init --recursive
+git clone --recursive --shallow-submodules https://github.com/rosvik/string.248.no.git
 ```
 
-The project is pure static vanilla JS, so open index.html in your favorite browser, and enjoy 🚀
+The site is just vanilla JS, so all you have to do is to open `index.html` in your favorite browser, and enjoy ✨
 
 ## Deployment
 
-A new production deployment is performed at every commit to master. To depoy manually with [`wrangler`](https://developers.cloudflare.com/workers/wrangler/install-and-update/) installed and authenticated, run
+A new production deployment is done on every commit to master, and a preview build on any other branch. To depoy a preview build manually, install and authenticate [`wrangler`](https://developers.cloudflare.com/workers/wrangler/install-and-update/), then run
 
 ```
 wrangler pages publish . --project-name=string-248-no
 ```
+
+A preview URL should then be printed to the console 🚀
 
 ## Submodules
 
