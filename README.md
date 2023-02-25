@@ -32,7 +32,7 @@ A new production deployment is done on every commit to master, and a preview bui
 wrangler pages publish . --project-name=string-248-no
 ```
 
-A preview URL should then be printed to the console 🚀
+Your preview URL should then be printed to the console 🚀
 
 ## Submodules
 
