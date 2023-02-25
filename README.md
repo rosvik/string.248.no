@@ -26,6 +26,14 @@ git submodule update --init --recursive
 
 The project is pure static vanilla JS, so open index.html in your favorite browser, and enjoy 🚀
 
+## Deployment
+
+A new production deployment is performed at every commit to master. To depoy manually with [`wrangler`](https://developers.cloudflare.com/workers/wrangler/install-and-update/) installed and authenticated, run
+
+```
+wrangler pages publish . --project-name=string-248-no
+```
+
 ## Submodules
 
 * [tiny-hashes](https://github.com/jbt/tiny-hashes) - Tiny JavaScript Hash Functions
