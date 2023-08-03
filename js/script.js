@@ -56,6 +56,10 @@ function full_compute(input) {
   b64(input, false, "b64e_out"); // Encoding
   b64(input, true, "b64d_out"); // Decoding
 
+  // Calculate lz64
+  lz64(input, false, "lz64e_out"); // Encoding
+  lz64(input, true, "lz64d_out"); // Decoding
+
   // Add character table to DOM
   character_table.innerHTML = chars_info(input);
 }
@@ -91,6 +95,25 @@ function b64(input, decode, id) {
     // Decode
     try {
       setOutVal(id, atob(input));
+    } catch (e) {
+      setOutVal(id, "Incompatible string");
+    }
+  }
+}
+
+// lz64 compression/decompression
+function lz64(input, decompress, id) {
+  if (!decompress) {
+    // Comress
+    try {
+      setOutVal(id, LZString.compress(input));
+    } catch (e) {
+      setOutVal(id, "Incompatible string");
+    }
+  } else {
+    // Decompress
+    try {
+      setOutVal(id, LZString.decompress(input));
     } catch (e) {
       setOutVal(id, "Incompatible string");
     }
