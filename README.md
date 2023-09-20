@@ -1,6 +1,3 @@
-<img src="docs/248-logo.svg" width="150" alt="248">
-
-
 # string.248.no
 
 This is the project files for [string.248.no](https://string.248.no), a static string analyzer on the web.
@@ -38,3 +35,5 @@ Your preview URL should then be printed to the console 🚀
 
 * [tiny-hashes](https://github.com/jbt/tiny-hashes) - Tiny JavaScript Hash Functions
 * [jsSHA](https://github.com/Caligatio/jsSHA) - A pure JS SHA implementation
+
+<div align="right"><img src="public/favicon.svg" width="32" alt="248"></div>
