@@ -81,6 +81,20 @@
       </tr>
     </table>
 
+    <table>
+      <tr>
+        <th colspan="2">lz64</th>
+      </tr>
+      <tr>
+        <td>Compressed</td>
+        <td id="lz64e_out"></td>
+      </tr>
+      <tr>
+        <td>Decompressed</td>
+        <td id="lz64d_out"></td>
+      </tr>
+    </table>
+
     <table id="chars"></table>
 
     <footer class="faded">
@@ -94,7 +108,8 @@
         Credit:
         <a href="https://github.com/jbt/tiny-hashes">jbt/tiny-hashes</a>,
         <a href="https://github.com/Caligatio/jsSHA">Caligatio/jsSHA</a>,
-        <a href="https://github.com/iarna/word-count">iarna/word-count</a>
+        <a href="https://github.com/iarna/word-count">iarna/word-count</a>,
+        <a href="https://github.com/pieroxy/lz-string">pieroxy/lz-string</a>
       </p>
     </footer>
 
@@ -102,6 +117,7 @@
     <script src="js-crypto/sha1-min.js" type="text/javascript"></script>
     <script src="js-crypto/sha256-min.js" type="text/javascript"></script>
     <script src="jsSHA/src/sha.js" type="text/javascript"></script>
+    <script src="js/lz-string/lz-string.min.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>
