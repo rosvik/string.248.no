@@ -13,6 +13,8 @@ let input = document.getElementById("hash_entry");
 let character_table = document.getElementById("chars");
 let LENGTH = 0;
 let WORDCOUNT = 0;
+const encoder = new TextEncoder();
+const decoder = new TextDecoder("utf-8");
 
 load_params();
 full_compute(input.value);
@@ -41,16 +43,20 @@ function full_compute(input) {
   stats(input);
 
   // Calculate hashes
-  compute(input, md5, "md5_out");
-  compute(input, sha1, "sha1_out");
-  js_sha(input, "SHA-224", "sha224_out");
-  js_sha(input, "SHA3-224", "sha3224_out");
-  compute(input, sha256, "sha256_out");
-  js_sha(input, "SHA3-256", "sha3256_out");
-  js_sha(input, "SHA-384", "sha384_out");
-  js_sha(input, "SHA3-384", "sha3384_out");
-  js_sha(input, "SHA-512", "sha512_out");
-  js_sha(input, "SHA3-512", "sha3512_out");
+  const md5Hash = hashMessage(input, "MD5");
+  setOutValAsync("md5_out", md5Hash);
+
+  const sha1Hash = hashMessage(input, "SHA-1");
+  setOutValAsync("sha1_out", sha1Hash);
+
+  const sha256Hash = hashMessage(input, "SHA-256");
+  setOutValAsync("sha256_out", sha256Hash);
+
+  const sha384Hash = hashMessage(input, "SHA-384");
+  setOutValAsync("sha384_out", sha384Hash);
+
+  const sha512Hash = hashMessage(input, "SHA-512");
+  setOutValAsync("sha512_out", sha512Hash);
 
   // Calculate base64
   b64(input, false, "b64e_out"); // Encoding
@@ -65,6 +71,12 @@ function setOutVal(id, value) {
   document.getElementById(id).textContent = value;
 }
 
+// Push any value to DOM, asynchronously
+async function setOutValAsync(id, promise) {
+  const result = await promise;
+  document.getElementById(id).textContent = result || "";
+}
+
 // Set string stats
 function stats(input) {
   // Display the length from length()
@@ -76,6 +88,21 @@ function stats(input) {
   // Calculate byte size of input
   let size = new TextEncoder().encode(input).length;
   setOutVal("size", size);
+}
+
+async function hashMessage(message, algorithm) {
+  if (algorithm === "MD5") {
+    return md5(message);
+  } else if (["SHA-1", "SHA-256", "SHA-384", "SHA-512"].includes(algorithm)) {
+    const msgUint8 = encoder.encode(message);
+    // https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest
+    const hashBuffer = await crypto.subtle.digest(algorithm, msgUint8);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+    return hex;
+  } else {
+    console.error(`ERROR: Unsupported algorithm "${algorithm}"`);
+  }
 }
 
 // Base-64 encoding/decoding
@@ -95,21 +122,6 @@ function b64(input, decode, id) {
       setOutVal(id, "Incompatible string");
     }
   }
-}
-
-// Hashes from js-crypto
-function compute(input, hash, id) {
-  let entry_value = input;
-  let hash_value = hash(entry_value);
-  setOutVal(id, hash_value);
-}
-
-// Hashes from jsSHA
-function js_sha(input, hashname, id) {
-  let shaObj = new jsSHA(hashname, "TEXT");
-  shaObj.update(input);
-  let hash_value = shaObj.getHash("HEX");
-  setOutVal(id, hash_value);
 }
 
 // Compute character information table

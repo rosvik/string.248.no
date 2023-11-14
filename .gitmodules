@@ -1,6 +1,0 @@
-[submodule "js-crypto"]
-	path = js-crypto
-	url = https://github.com/jbt/js-crypto
-[submodule "jsSHA"]
-	path = jsSHA
-	url = https://github.com/Caligatio/jsSHA
