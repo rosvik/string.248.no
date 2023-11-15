@@ -31,9 +31,4 @@ wrangler pages publish . --project-name=string-248-no
 
 Your preview URL should then be printed to the console 🚀
 
-## Submodules
-
-* [tiny-hashes](https://github.com/jbt/tiny-hashes) - Tiny JavaScript Hash Functions
-* [jsSHA](https://github.com/Caligatio/jsSHA) - A pure JS SHA implementation
-
 <div align="right"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1774972/269361517-d0d8e30e-4a25-4ba2-b926-2a42da1156f8.svg" width="32" alt="248"></div>
