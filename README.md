@@ -16,10 +16,10 @@ This is the project files for [string.248.no](https://string.248.no), a static s
 The website is avaliable at [string.248.no](https://string.248.no), but if you want to run the website on you own, clone the repo with submodules by running
 
 ```
-git clone --recursive --shallow-submodules https://github.com/rosvik/string.248.no.git
+git clone https://github.com/rosvik/string.248.no.git
 ```
 
-The site is just vanilla JS, so all you have to do is to open `index.html` in your favorite browser, and enjoy ✨
+The site is just static HTML, CSS and JavaScript, so all you have to do is to serve the files. If you have Python installed, you can run `python3 -m http.server` from your command line, open [localhost:8000](http://localhost:8000), and enjoy ✨
 
 ## Deployment
 
