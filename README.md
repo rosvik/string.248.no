@@ -13,7 +13,7 @@ This is the project files for [string.248.no](https://string.248.no), a static s
 
 ## Installation
 
-The website is avaliable at [string.248.no](https://string.248.no), but if you want to run the website on you own, clone the repo with submodules by running
+The website is avaliable at [string.248.no](https://string.248.no), but if you want to run the website on you own, clone the repo by running
 
 ```
 git clone https://github.com/rosvik/string.248.no.git
