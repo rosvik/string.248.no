@@ -1,0 +1,41 @@
+name: Push Container To Registry
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  podman-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Setup for multi architecture build
+      - name: Install QEMU
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y qemu-user-static
+
+      - name: Build Image
+        id: build-image
+        uses: redhat-actions/buildah-build@v2
+        with:
+          image: string.248.no
+          tags: master ${{ github.sha }}
+          platforms: linux/amd64, linux/arm64
+          oci: true
+          layers: true
+          containerfiles: |
+            Containerfile
+
+      - name: Push To cubby.no
+        id: push-to-cubby
+        uses: redhat-actions/push-to-registry@v2
+        with:
+          image: ${{ steps.build-image.outputs.image }}
+          tags: ${{ steps.build-image.outputs.tags }}
+          registry: cubby.no/rosvik
+          username: ${{ vars.REGISTRY_USER }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+      - name: Print image url
+        run: echo "Image pushed to ${{ steps.push-to-cubby.outputs.registry-paths }}"
