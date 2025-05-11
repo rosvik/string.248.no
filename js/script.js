@@ -54,6 +54,18 @@ function calculateAndPopulate(input) {
   const b64_decoding = b64Decode(input);
   setElementContentById("b64d_out", b64_decoding);
 
+  const uri_encoding = uriEncode(input);
+  setElementContentById("uri_encoded_out", uri_encoding);
+
+  const uri_component_encoding = uriEncodeComponent(input);
+  setElementContentById("uri_component_encoded_out", uri_component_encoding);
+
+  const uri_decoding = uriDecode(input);
+  setElementContentById("uri_decoded_out", uri_decoding);
+
+  const uri_component_decoding = uriDecodeComponent(input);
+  setElementContentById("uri_component_decoded_out", uri_component_decoding);
+
   // Add character table to DOM
   character_table.innerHTML = characterTable(input);
 }
@@ -95,6 +107,30 @@ function b64Decode(input) {
   try {
     return atob(input);
   } catch (e) {
+    return "Incompatible string";
+  }
+}
+
+// URL encoding/decoding
+function uriEncodeComponent(input) {
+  return encodeURIComponent(input);
+}
+function uriDecodeComponent(input) {
+  try {
+    return decodeURIComponent(input);
+  } catch (e) {
+    console.error(e);
+    return "Incompatible string";
+  }
+}
+function uriEncode(input) {
+  return encodeURI(input);
+}
+function uriDecode(input) {
+  try {
+    return decodeURI(input);
+  } catch (e) {
+    console.error(e);
     return "Incompatible string";
   }
 }
