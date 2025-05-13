@@ -4,7 +4,8 @@ on:
     branches:
       - master
 jobs:
-  build:
+  push-container:
+    name: Push Container
     uses: rosvik/workflows/.github/workflows/push-container.yml@main
     with:
       containerfile: Containerfile
