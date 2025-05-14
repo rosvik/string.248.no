@@ -1,4 +1,4 @@
-name: Push Container
+name: Deploy
 on:
   push:
     branches:
@@ -15,3 +15,11 @@ jobs:
       registry_username: ${{ vars.REGISTRY_USER }}
     secrets:
       registry_password: ${{ secrets.REGISTRY_PASSWORD }}
+  cubbyman-reload:
+    name: Cubbyman Reload
+    needs: push-container
+    uses: rosvik/workflows/.github/workflows/cubbyman-reload.yml@main
+    with:
+      base_url: https://cubby.no
+    secrets:
+      credentials: ${{ secrets.CUBBYMAN_CREDENTIALS }}
