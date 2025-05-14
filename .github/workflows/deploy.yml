@@ -10,7 +10,6 @@ jobs:
     with:
       containerfile: Containerfile
       image: rosvik/string.248.no
-      tag: ${{ github.ref_name }} # git tag or short branch name
       registry_url: cubby.no
       registry_username: ${{ vars.REGISTRY_USER }}
     secrets:
