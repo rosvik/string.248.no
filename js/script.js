@@ -57,14 +57,26 @@ function calculateAndPopulate(input) {
   const uri_encoding = uriEncode(input);
   setElementContentById("uri_encoded_out", uri_encoding);
 
+  // Only show component encoding if it's different from regular encoding
   const uri_component_encoding = uriEncodeComponent(input);
-  setElementContentById("uri_component_encoded_out", uri_component_encoding);
+  if (uri_component_encoding !== uri_encoding) {
+    showElement("uri_component_encoding_row");
+    setElementContentById("uri_component_encoded_out", uri_component_encoding);
+  } else {
+    hideElement("uri_component_encoding_row");
+  }
 
   const uri_decoding = uriDecode(input);
   setElementContentById("uri_decoded_out", uri_decoding);
 
+  // Only show component decoding if it's different from regular decoding
   const uri_component_decoding = uriDecodeComponent(input);
-  setElementContentById("uri_component_decoded_out", uri_component_decoding);
+  if (uri_component_decoding !== uri_decoding) {
+    showElement("uri_component_decoding_row");
+    setElementContentById("uri_component_decoded_out", uri_component_decoding);
+  } else {
+    hideElement("uri_component_decoding_row");
+  }
 
   // Add character table to DOM
   character_table.innerHTML = characterTable(input);
@@ -77,6 +89,16 @@ function setElementContentById(id, value) {
 async function setElementContentByIdAsync(id, promise) {
   const result = await promise;
   setElementContentById(id, result || "");
+}
+
+// Show/hide elements
+function showElement(id) {
+  const element = document.getElementById(id);
+  if (element) element.style.display = "";
+}
+function hideElement(id) {
+  const element = document.getElementById(id);
+  if (element) element.style.display = "none";
 }
 
 // Hashing
