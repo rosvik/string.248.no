@@ -73,3 +73,8 @@ footer {
 #uri_component_decoded_out {
 	white-space: pre;
 }
+
+#uri_component_encoding_row td,
+#uri_component_decoded_row td {
+	min-width: 9ch;
+}
