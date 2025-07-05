@@ -68,3 +68,8 @@ footer {
 .faded {
 	opacity: .7;
 }
+
+#uri_decoded_out,
+#uri_component_decoded_out {
+	white-space: pre;
+}
